@@ -1,0 +1,95 @@
+/* 
+ z-index:لازم قبله position عشان يشتغل وبيعملالاخير بيبقي الاول ترتيب للطبقات
+ 
+ */
+.container {
+  min-height: 2000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1674px;
+  height: 935px;
+  /* margin: 30px ; */
+  background-image: url(https://cdn.pixabay.com/photo/2016/06/08/15/45/lemon-1444025_1280.jpg);
+  /* overflow:auto; */
+  /* background-repeat:repeat; */
+  background-size: 100%;
+  border: 10px solid green;
+
+  header {
+    background-color: #f0f0f0;
+    text-shadow: 1px 1px 1px red;
+    color: blue;
+    font-size: 40px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .submit {
+      width: fitcontent;
+      margin: 20px 0;
+    }
+  }
+}
+
+button {
+  margin-bottom: 15px;
+  position: sticky;
+  top: 0;
+}
+
+.nermo {
+  text-decoration: none;
+  margin-bottom: 20px;
+  color: green;
+}
+.nermo:hover {
+  color: red;
+}
+.nermo:visited {
+  color: black;
+}
+.lolo {
+  border: 2px solid red;
+}
+.lolo:focus {
+  border: 2px solid black;
+  outline: none;
+}
+
+.description {
+  position: relative;
+  background-color: transparent;
+  padding: 10px;
+  margin: 80px;
+  font-size: 50px;
+  &::before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    border-color: transparent green transparent transparent;
+    left: -40px;
+    top: 50%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+  }
+  &::first-letter {
+    background-color: red;
+    font-weight: bold;
+    font-size: 80px;
+    color: white;
+  }
+  &::first-line {
+    color: green;
+  }
+  &::selection {
+    background-color: red;
+    color: white;
+  }
+}
