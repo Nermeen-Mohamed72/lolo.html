@@ -2,27 +2,60 @@
  z-index:لازم قبله position عشان يشتغل وبيعملالاخير بيبقي الاول ترتيب للطبقات
  
  */
+
+ * {
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   box-sizing:border-box;
+
+ }
 .container {
   min-height: 2000px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 1674px;
-  height: 935px;
+  width: 100%;
+  height: 100%;
   /* margin: 30px ; */
   background-image: url(https://cdn.pixabay.com/photo/2016/06/08/15/45/lemon-1444025_1280.jpg);
   /* overflow:auto; */
   /* background-repeat:repeat; */
   background-size: 100%;
-  border: 10px solid green;
+  /* border: 10px solid green; */
+
+
 
   header {
-    background-color: #f0f0f0;
-    text-shadow: 1px 1px 1px red;
-    color: blue;
-    font-size: 40px;
-  }
+    width:200px;
+    height:100px;
+  background-color: #2ac9d5  !important;  
+        text-shadow: 1px 1px 1px red;
+        color: blue;
+        font-size: 40px;
+        position: fixed;
+        top: 0;
+        padding: 20px;
+        box-shadow: 10px 10px 2px 0px blue;
+        transition-duration:1s;
+        transition-delay:0.2s;
+        transition-property:all;
+        &:hover{
+          margin-left:90px;
+          width:250px;
+
+        }
+    }}
+
+  .button {
+    padding: 10px;
+    margin-bottom: 20px;
+    position: sticky;
+    border-radius: 20px;
+    background: lightcoral;
+    color: floralwhite;
+
+}
   form {
     display: flex;
     flex-direction: column;
@@ -33,32 +66,30 @@
       margin: 20px 0;
     }
   }
-}
 
-button {
-  margin-bottom: 15px;
-  position: sticky;
-  top: 0;
-}
+ .nermo {
+   text-decoration: none;
+   margin-bottom: 20px;
+   color: green;
+    &:hover {
+     color: red;
+    }
+    &:visited {
+      color: black;
+      }
+    }
+    
+  
+      
 
-.nermo {
-  text-decoration: none;
-  margin-bottom: 20px;
-  color: green;
-}
-.nermo:hover {
-  color: red;
-}
-.nermo:visited {
-  color: black;
-}
 .lolo {
   border: 2px solid red;
-}
-.lolo:focus {
+  &::focus {
   border: 2px solid black;
   outline: none;
 }
+}
+
 
 .description {
   position: relative;
